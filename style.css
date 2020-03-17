@@ -1,0 +1,155 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h4{
+    margin:1rem 0 2rem 0;
+}
+a{
+    cursor:pointer;
+}
+header{
+    text-align: center;
+}
+section{
+    margin:2rem auto;
+}
+container{
+    display: flex;
+    width:80%;
+    margin:0 auto;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Animated SVG beating heart*/
+button.svg{
+    cursor:pointer;
+    border: 0;
+    border-bottom: 1px solid #1772dc;
+    color:#1772dc;
+    text-align: center;
+    padding:4px;
+    outline: 0;
+    font-size: 2rem;
+    margin: 1rem;
+    transition: ease-in-out .5s;
+    border-radius:0;
+    
+}
+button.svg:hover{
+    background: #1772dc;
+    color:white;
+    font-size: 2.2rem;
+    border-radius: 12px;
+}
+/*Pure CSS heart shape*/
+.heart-shape {
+    display: block;
+    height: 60px;
+    margin: 1rem;
+    position: relative;
+    top: 0;
+    border-radius:0!important;
+    border:0px transparent!important;
+    transform: rotate(-45deg);
+    width: 60px;
+    color:white!important;
+    background-color: red!important;
+    animation: fadeIn 1s backwards;
+  }
+  .heart-shape h2{
+    transform: rotate(45deg);
+    transition: transform 1s;
+  }
+  .heart-div{
+    cursor:pointer;
+    display: inline-block;
+    height: 60px;
+    margin: 10px;
+    width: 60px;
+    border-radius :50%;
+    border:1px solid #1772dc;
+    color:#1772dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    transition-duration: .75s;
+    transition: border border-radius background-color color opacity transform position width height ease-in-out;
+}
+.heart-div:hover{
+    color:white;
+    background:#1772dc;
+}
+  .heart-shape:before,
+  .heart-shape:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    z-index: -1;
+    animation: fadeIn .05s backwards;
+  }
+  
+  .heart-shape:before {
+    top: -30px;
+    left: 0;
+  }
+  
+  .heart-shape:after {
+    left: 30px;
+    top: 0;
+  }
+
+  @keyframes fadeIn{
+    0%  {opacity: 0;}
+  25%  {opacity: .25;}
+  50%  {opacity: .5;}
+  75%  {opacity: .75;}
+  100% {opacity: 1;}
+}
+
+svg.heart-hand{
+    cursor:pointer;
+    max-height: 3rem;
+    max-width: 3rem;
+    margin:0;
+}
+
+ .redHeart{
+    animation: beat 1s ease-in-out infinite;
+    transform-origin: center;
+    
+}
+@keyframes beat{
+    0%  {transform: scale(1.25);}
+  25%  {transform: scale(1.35);}
+  50%  {transform: scale(1.25);}
+  75%  {transform: scale(.85);}
+  100% {transform: scale(1);}
+}
+
+/*Animated Stroke Wespire logo*/
+.pen {
+    stroke-dasharray: 0;
+    stroke-dashoffset:2842;
+    animation-duration: 2s;
+    animation-name: draw;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes draw {
+    from {
+        stroke-dasharray: 2842;
+      stroke-dashoffset: 2842;
+    }
+  
+    to {
+        stroke-dasharray: 2842;
+      stroke-dashoffset: 0;
+    }
+  }
+  
